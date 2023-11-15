@@ -1,0 +1,24 @@
+{
+  "name": "online education theme",
+  "version": "1.0.0",
+  "description": "Build from https://htmlcodex.com/elearning-html-template/",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://htmlcodex.com/elearning-html-template/"
+  },
+  "keywords": ["wordpress", "custom", "theme"],
+  "author": "Oscariotes",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "bootstrap": "^5.0.0",
+    "wowjs": "^1.1.3",
+    "easing-js": "^1.4.5",
+    "waypoints": "^4.0.1",
+    "owl.carousel": "^2.3.4"
+  }
+}
