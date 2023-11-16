@@ -33,43 +33,44 @@ function university_files() {
     wp_enqueue_style("university_main_styles", get_theme_file_uri("/css/style.css"), array(), '1.0');
 
 
-// jQuery
-wp_register_script("university_jquery_code", "//code.jquery.com/jquery-3.4.1.min.js", array(), '3.4.1', true);
-wp_enqueue_script("university_jquery_code");
+    // jQuery
+    wp_register_script("university_jquery_code", "//code.jquery.com/jquery-3.4.1.min.js", array(), '3.4.1', true);
+    wp_enqueue_script("university_jquery_code");
 
-// Bootstrap (with jQuery as a dependency)
-wp_register_script("university_bootstrap_cdn", "//cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js", array('jquery'), '5.0.0', true);
-wp_enqueue_script("university_bootstrap_cdn");
+    // Bootstrap (with jQuery as a dependency)
+    wp_register_script("university_bootstrap_cdn", "//cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js", array('jquery'), '5.0.0', true);
+    wp_enqueue_script("university_bootstrap_cdn");
 
-// Wow.js
-wp_register_script("university_wow", get_theme_file_uri("/lib/wow/wow.min.js"), array(), '1.3.0', true);
-wp_enqueue_script("university_wow");
+    // Wow.js
+    wp_register_script("university_wow", get_theme_file_uri("/lib/wow/wow.min.js"), array(), '1.3.0', true);
+    wp_enqueue_script("university_wow");
 
-// Easing.js
-wp_register_script("university_easing", get_theme_file_uri("/lib/easing/easing.min.js"), array(), '1.4.5', true);
-wp_enqueue_script("university_easing");
+    // Easing.js
+    wp_register_script("university_easing", get_theme_file_uri("/lib/easing/easing.min.js"), array(), '1.4.5', true);
+    wp_enqueue_script("university_easing");
 
-// Waypoints.js
-wp_register_script("university_waypoints", get_theme_file_uri("/lib/waypoints/waypoints.min.js"), array(), '4.0.1', true);
-wp_enqueue_script("university_waypoints");
+    // Waypoints.js
+    wp_register_script("university_waypoints", get_theme_file_uri("/lib/waypoints/waypoints.min.js"), array(), '4.0.1', true);
+    wp_enqueue_script("university_waypoints");
 
-//Owl carousel
+    //Owl carousel
 
-wp_register_script("university_carousel_script", get_theme_file_uri("lib/owlcarousel/owl.carousel.min.js"), array(), '2.2.1', true);
-wp_enqueue_script("university_carousel_script");
+    wp_register_script("university_carousel_script", get_theme_file_uri("lib/owlcarousel/owl.carousel.min.js"), array(), '2.2.1', true);
+    wp_enqueue_script("university_carousel_script");
 
-// Main JS
-wp_register_script("university_main_script", get_theme_file_uri("/js/main.js"), array("jquery"), '1.0', true);
-wp_enqueue_script("university_main_script");
+    // Main JS
+    wp_register_script("university_main_script", get_theme_file_uri("/js/main.js"), array("jquery"), '1.0', true);
+    wp_enqueue_script("university_main_script");
 
+  }
 
+    add_action("wp_enqueue_scripts", "university_files");
 
+    function university_theme_title(){
+        add_theme_support('title-tag');
+    }
 
-
-}
-
-add_action("wp_enqueue_scripts", "university_files");
-
+    add_action("after_setup_theme", "university_theme_title");
 
 
 
